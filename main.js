@@ -1,4 +1,14 @@
+$(function () {
+    $('.menu-toggle, .fa-times').on('click', function () {
+        $('nav').toggleClass('active');
+        $('overlay').toggleClass('menu-open');
+    });
 
+    $('overlay').on('click', function () {
+        $('nav').removeClass('active');
+        $('overlay').removeClass('menu-open');
+    });
+});
 
   function setNewImage() {
       document.getElementById("img1").src = "assets/images/watch-front-copy.png";

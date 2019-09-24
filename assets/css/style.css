@@ -159,6 +159,7 @@ nav ul li:hover {
     font-weight: 200;
     margin-bottom: 1rem;
     text-align: center;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .product-info h2 {
@@ -303,35 +304,43 @@ nav ul li:hover {
     }
     
     .side2 img {
-        transform: translateY(-63%);
+        transform: translateY(-65%);
         left: -5rem;
         z-index: 1000;
-        width: 26rem;
+        width: 30rem;
     } 
 
     .product-info h1 {
-        font-size: 2.8rem;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        font-weight: bolder;
+    }
+    .product-info h2 {
+        font-size: 2rem;
+        margin-bottom: 25rem;
+    }
+    .btn {
+        font-size: 1.2rem;
+        font-weight: 800;
     }
 
     .menu-toggle {
-        display: flex;
+        display: flex !important;
+        z-index: 98;
     }
 
     .fa-times {
         display: block !important;
         position: absolute;
-        top: 2rem;
-        right: 2rem;
+        top: 1rem;
+        right: 1rem;
+        font-size: 3.5rem;
     }
 
-    nav ul {
-        height: 6rem;
-        font-size: 1em;
+    .menu-toggle i, .fa-times {
+        font-size: 3rem;
     }
 
-    nav ul li {
-        line-height: 6rem;
-    }
 
     nav {
         border-top: none;
@@ -342,7 +351,7 @@ nav ul li:hover {
         height: 100vh;
         background-color: #d9d5d5;
         justify-content: space-evenly;
-        
+        transform: translateX(-26rem);
         transition: transform .5s;
         z-index: 99;
     }
@@ -365,5 +374,111 @@ nav ul li:hover {
         margin-left: .6rem !important;
     }
 
+    .active {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        position: absolute;
+        width: 0;
+        height: 100vh;
+        background-color: #d9d5d5;
+        z-index: 998;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    .overlay.menu-open {
+            width: 100%;
+            opacity: 1;
+    }
+
 }
 
+@media screen and (max-width: 430px) {
+    .logo {
+        width: 14rem;
+    }
+    
+    .side2 img {
+        transform: translateY(-70%);
+        width: 22rem;
+    } 
+
+    .fa-times {
+        top: .5rem;
+        right: .5rem;
+    }
+
+
+    nav {
+        border-top: none;
+        display: flex;
+        border-bottom: none;
+        flex-direction: column;
+        width: 20rem;
+        height: 100vh;
+        background-color: #d9d5d5;
+        justify-content: space-evenly;
+        
+        transition: transform .5s;
+        z-index: 99;
+    }
+
+    nav ul {
+        height: initial;
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 0;
+        line-height: initial;
+        margin-bottom: 2rem;
+        border: none !important;
+        font-size: .9em;
+    }
+
+    .nav-middle ul li {
+        margin-left: .6rem !important;
+    }
+
+    .product-info h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    .product-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25rem;
+    }
+    .btn {
+        font-size: .95rem;
+        font-weight: 800;
+    }
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .logo {
+        width: 14rem;
+    }
+    
+    .side2 img {
+        transform: translateY(-70%);
+        width: 20rem;
+        left: -1.5rem;
+    } 
+
+    nav ul li {
+        font-size: .8em;
+    }
+
+    .btn {
+        font-size: .75rem;
+        font-weight: 800;
+        padding: 1.3rem;
+    }
+
+}
